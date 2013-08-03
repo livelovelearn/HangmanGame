@@ -23,6 +23,7 @@ public class Hangman extends ConsoleProgram {
     	print("The word now looks like this: ");
     	for (int i=0;i<length;i++) print("-");
     	
+    	while(chance>0){
     	String str1= readLine("Your guess: ");
     	char ch1=str1.charAt(0);
     	if (ch1-'A'>=0&&ch1-'A'<=25)
@@ -39,9 +40,10 @@ public class Hangman extends ConsoleProgram {
     	if (pos1==-1)
     		{println("There are no " + ch1 + "'s in the word.");
     	     chance--;
-    	     }
+    	     println("You have " +chance+" guesses left.");}
+    	}
     	
-    	
+    	println("You loose");
 	}
 
     private HangmanLexicon lex = new HangmanLexicon();
