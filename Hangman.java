@@ -15,7 +15,7 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
     	int random = rgen.nextInt (0, 10);
-    	String word = lex.getWord(random);
+    	String word = lex.getWord(0);
     	int length = word.length();
     	int chance = 8;
     	
@@ -43,7 +43,7 @@ public class Hangman extends ConsoleProgram {
     	     println("You have " +chance+" guesses left.");}
     	}
     	
-    	println("You loose");
+    	println("You lose");
 	}
 
     private HangmanLexicon lex = new HangmanLexicon();
