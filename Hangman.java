@@ -26,14 +26,14 @@ public class Hangman extends ConsoleProgram {
     	while(chance>0){
     	String str1= readLine("Your guess: ");
     	char ch1=str1.charAt(0);
-    	if (ch1-'A'>=0&&ch1-'A'<=25)
-    		{ch1=(char)(ch1-'A'+'a');}
+    	if (ch1-'a'>=0&&ch1-'a'<=25)
+    		{ch1=(char)(ch1-'a'+'A');}
     	
-    	while(ch1-'a'<0||ch1-'a'>25)
+    	while(ch1-'A'<0||ch1-'A'>25)
     		{str1=("illegal character, please guess again: ");
     		 ch1=str1.charAt(0);
-    		 if (ch1-'A'>=0&&ch1-'A'<=25)
-     		     {ch1=(char)(ch1-'A'+'a');}
+    		 if (ch1-'a'>=0&&ch1-'a'<=25)
+     		     {ch1=(char)(ch1-'a'+'A');}
     		}
     	
     	int pos1= word.indexOf(ch1);
