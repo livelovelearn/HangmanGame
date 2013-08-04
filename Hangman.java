@@ -52,8 +52,7 @@ public class Hangman extends ConsoleProgram {
 
 			int pos1 = word.indexOf(ch1);
 			if (pos1 == -1) {
-				canvas.reset();
-				canvas.noteIncorrectGuess(ch1);
+				canvas.noteIncorrectGuess(ch1, chance);
 				println("There are no " + ch1 + "'s in the word.");
 				chance--;
 				println("You have " + chance + " guesses left.");
@@ -86,5 +85,6 @@ public class Hangman extends ConsoleProgram {
 	private HangmanLexicon lex = new HangmanLexicon();
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private HangmanCanvas canvas;
+	
 
 }
