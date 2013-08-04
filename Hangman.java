@@ -18,7 +18,7 @@ public class Hangman extends ConsoleProgram {
         String word = lex.getWord(4);
         int length = word.length();
         
-        String covered =null;
+        String covered ="";
     	int chance = 8;
     	int leftch= length;
     	char cover[]= new char[length];
