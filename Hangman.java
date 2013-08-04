@@ -28,7 +28,7 @@ public class Hangman extends ConsoleProgram {
     	print("The word now looks like this: ");
     	for (int i=0;i<length;i++) 
     		  covered += '-';
-    	println();
+    	println(covered);
     	
      while(chance>0){
     	String str1= readLine("Your guess: ");
