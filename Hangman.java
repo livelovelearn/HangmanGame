@@ -58,7 +58,7 @@ public class Hangman extends ConsoleProgram {
 				println("You have " + chance + " guesses left.");
 			} else {
 				for (int i = 0; i < length; i++) {
-					if (word.charAt(i) == ch1) {
+					if (covered.charAt(i)!=ch1&&word.charAt(i) == ch1) {
 						covered = covered.substring(0, i) + ch1
 								+ covered.substring(i + 1);
 						leftch--;
