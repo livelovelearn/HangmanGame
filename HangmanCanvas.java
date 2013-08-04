@@ -85,9 +85,42 @@ public class HangmanCanvas extends GCanvas {
 				add(line31);
 				GLine line32= new GLine(getWidth()/2, getHeight()*0.25, getWidth()/3*2, getHeight()*0.35);
 				add(line32);
-				GLine line33= new GLine(getWidth()/2, getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH, getWidth()/3, getHeight()*0.55);
+				GLine line33= new GLine(getWidth()/2, getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH, getWidth()/3, getHeight()*0.65);
 				add(line33);
 				break;	
+			case 2:
+				GOval oval2= new GOval(getWidth()/2-HEAD_RADIUS/2, getHeight()*0.1 + ROPE_LENGTH, HEAD_RADIUS, HEAD_RADIUS);
+				add(oval2);
+				GLine line2 = new GLine(getWidth()/2,getHeight()*0.1+1.5*HEAD_RADIUS, getWidth()/2,getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH);
+				add(line2);
+				GLine line21= new GLine(getWidth()/2, getHeight()*0.25, getWidth()/3, getHeight()*0.35);
+				add(line21);
+				GLine line22= new GLine(getWidth()/2, getHeight()*0.25, getWidth()/3*2, getHeight()*0.35);
+				add(line22);
+				GLine line23= new GLine(getWidth()/2, getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH, getWidth()/3, getHeight()*0.65);
+				add(line23);
+				GLine line24= new GLine(getWidth()/2, getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH, getWidth()/3*2, getHeight()*0.65);
+				add(line24);
+				break;
+			case 1:
+				GOval oval1= new GOval(getWidth()/2-HEAD_RADIUS/2, getHeight()*0.1 + ROPE_LENGTH, HEAD_RADIUS, HEAD_RADIUS);
+				add(oval1);
+				GLine line1 = new GLine(getWidth()/2,getHeight()*0.1+1.5*HEAD_RADIUS, getWidth()/2,getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH);
+				add(line1);
+				GLine line11= new GLine(getWidth()/2, getHeight()*0.25, getWidth()/3, getHeight()*0.35);
+				add(line11);
+				GLine line12= new GLine(getWidth()/2, getHeight()*0.25, getWidth()/3*2, getHeight()*0.35);
+				add(line12);
+				GLine line13= new GLine(getWidth()/2, getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH, getWidth()/3, getHeight()*0.65);
+				add(line13);
+				GLine line14= new GLine(getWidth()/2, getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH, getWidth()/3*2, getHeight()*0.65);
+				add(line14);
+				GLine line15= new GLine(getWidth()/2-HEAD_RADIUS/2, getHeight()*0.15 + ROPE_LENGTH, getWidth()/2-HEAD_RADIUS/2+HEAD_RADIUS, getWidth()/2-HEAD_RADIUS/2+HEAD_RADIUS);
+				add(line15);
+				break;
+			case 0:
+				GLabel label0 = new GLabel("You lose", getWidth()/2, getHeight()/2);
+				add(label0);
 			
 		}
 	}
