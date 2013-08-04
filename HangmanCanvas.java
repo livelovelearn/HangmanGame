@@ -49,7 +49,7 @@ public class HangmanCanvas extends GCanvas {
 		
 		switch (chance){
 			case 7:
-				GOval oval= new GOval(getWidth()/2-HEAD_RADIUS, getHeight()*0.1 + ROPE_LENGTH, HEAD_RADIUS, HEAD_RADIUS);
+				GOval oval= new GOval(getWidth()/2-HEAD_RADIUS/2, getHeight()*0.1 + ROPE_LENGTH, HEAD_RADIUS, HEAD_RADIUS);
 				add(oval);
 		}
 	}
