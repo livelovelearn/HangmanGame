@@ -56,9 +56,9 @@ public class Hangman extends ConsoleProgram {
     		{cover[pos1]=ch1;    		
     		 coverInt[pos1]=1;
     		 leftch--;}
-    		 if (word.substring(pos1+1).indexOf(ch1)==-1);
-    		 break;
-    		 pos1=word.substring(pos1+1).indexOf(ch1);
+    		if (word.substring(pos1+1).indexOf(ch1)<0);
+    			 break;
+    		 pos1 = word.substring(pos1+1).indexOf(ch1);
     		
     		
     		}
