@@ -15,9 +15,10 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
     	int random = rgen.nextInt (0, 10);
-    	String word = lex.getWord(0);
+        String word = lex.getWord(0);
     	int length = word.length();
     	int chance = 8;
+    	int leftch= length;
     	char cover[]= new char[length];
     	
     	println("Welcom to Hangman!");
@@ -26,10 +27,9 @@ public class Hangman extends ConsoleProgram {
     		cover[i]='-';
     	for (int i=0;i<length;i++) 
     	    print(cover[i]);
-    	
     	println();
     	
-    	while(chance>0){
+     while(chance>0){
     	String str1= readLine("Your guess: ");
     	char ch1=str1.charAt(0);
     	if (ch1-'a'>=0&&ch1-'a'<=25)
@@ -46,18 +46,28 @@ public class Hangman extends ConsoleProgram {
     	if (pos1==-1)
     		{println("There are no " + ch1 + "'s in the word.");
     	     chance--;
-    	     println("You have " +chance+" guesses left.");}
+    	     println("You have " +chance+" guesses left.");
+    	     }
     	else{
+    		leftch--;
     		cover[pos1]=ch1;
-    		println("The word now looks like this");
+    		print("The word now looks like this");
     		for (int i=0;i<length;i++) 
         	    print(cover[i]);
+    		println();
+    	    }
+    	if (leftch==0)
+    	{
+    		println("you win");
+    		break;
     	}
-    	}
+     }
     	
-    	println("You lose");
+    	if (chance==0)println("You lose");
 	}
 
+  
     private HangmanLexicon lex = new HangmanLexicon();
     private RandomGenerator rgen = RandomGenerator.getInstance();
+   
 }
