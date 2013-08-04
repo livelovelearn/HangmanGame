@@ -32,6 +32,7 @@ public class Hangman extends ConsoleProgram {
 		for (int i = 0; i < length; i++)
 			covered += '-';
 		println(covered);
+		canvas.displayWord(covered);
 
 		while (chance > 0) {
 			String str1 = readLine("Your guess: ");
