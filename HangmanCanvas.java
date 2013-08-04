@@ -27,9 +27,9 @@ public class HangmanCanvas extends GCanvas {
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
-		GRect rect = new GRect(0,getHeight()*0.85, getWidth(), getHeight()*0.05);
+		GRect rect = new GRect(0,getHeight()*0.87, getWidth(), getHeight()*0.05);
 		rect.setFilled(true);
-		rect.setFillColor(Color.RED);
+		rect.setFillColor(Color.LIGHT_GRAY);
 		add (rect);
 		GLabel wordlabel = new GLabel(word, getWidth()/2, getHeight()*0.9);
 		add (wordlabel);
