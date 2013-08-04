@@ -58,6 +58,15 @@ public class HangmanCanvas extends GCanvas {
 				GLine line = new GLine(getWidth()/2,getHeight()*0.1+1.5*HEAD_RADIUS, getWidth()/2,getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH);
 				add(line);
 				break;
+			case 5:
+				GOval oval5= new GOval(getWidth()/2-HEAD_RADIUS/2, getHeight()*0.1 + ROPE_LENGTH, HEAD_RADIUS, HEAD_RADIUS);
+				add(oval5);
+				GLine line5 = new GLine(getWidth()/2,getHeight()*0.1+1.5*HEAD_RADIUS, getWidth()/2,getHeight()*0.1+HEAD_RADIUS+ BODY_LENGTH);
+				add(line5);
+				GLine line51= new GLine(getWidth()/2, getHeight()*0.2, getWidth()/4, getHeight()*0.4);
+				add(line51);
+				break;	
+			
 		}
 	}
 
