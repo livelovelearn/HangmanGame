@@ -18,10 +18,13 @@ public class Hangman extends ConsoleProgram {
     	String word = lex.getWord(0);
     	int length = word.length();
     	int chance = 8;
+    	char cover[]= new char[length];
     	
     	println("Welcom to Hangman!");
     	print("The word now looks like this: ");
-    	for (int i=0;i<length;i++) print("-");
+    	for (int i=0;i<length;i++) 
+    		cover[i]='-';
+    	print(cover);
     	
     	while(chance>0){
     	String str1= readLine("Your guess: ");
@@ -41,6 +44,9 @@ public class Hangman extends ConsoleProgram {
     		{println("There are no " + ch1 + "'s in the word.");
     	     chance--;
     	     println("You have " +chance+" guesses left.");}
+    	else{
+    		println("The word now looks like this")
+    	}
     	}
     	
     	println("You lose");
