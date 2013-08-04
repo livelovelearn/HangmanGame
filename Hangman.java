@@ -24,7 +24,10 @@ public class Hangman extends ConsoleProgram {
     	print("The word now looks like this: ");
     	for (int i=0;i<length;i++) 
     		cover[i]='-';
-    	println(cover);
+    	for (int i=0;i<length;i++) 
+    	    print(cover[i]);
+    	
+    	println();
     	
     	while(chance>0){
     	String str1= readLine("Your guess: ");
