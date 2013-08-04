@@ -38,7 +38,7 @@ public class HangmanCanvas extends GCanvas {
 	public void noteIncorrectGuess(char letter, int chance) {
 		String wrongLetters ="";
 		wrongLetters += letter;
-		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2-chance*30, getHeight()*0.95);
+		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2-chance*10, getHeight()*0.95);
 		add (wordlabe2);
 	}
 
