@@ -29,7 +29,7 @@ public class HangmanCanvas extends GCanvas {
 	public void displayWord(String word) {
 		GRect rect = new GRect(0,getHeight()*0.87, getWidth(), getHeight()*0.05);
 		rect.setFilled(true);
-		rect.setFillColor(Color.LIGHT_GRAY);
+		rect.setFillColor(Color.WHITE);
 		add (rect);
 		GLabel wordlabel = new GLabel(word, getWidth()/2, getHeight()*0.9);
 		add (wordlabel);
@@ -44,8 +44,14 @@ public class HangmanCanvas extends GCanvas {
 	public void noteIncorrectGuess(char letter, int chance) {
 		String wrongLetters ="";
 		wrongLetters += letter;
-		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2+100-chance*10, getHeight()*0.95);
+		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2+80-chance*10, getHeight()*0.95);
 		add (wordlabe2);
+		
+		switch (chance){
+			case 7:
+				GOval oval= new GOval(100, 100, HEAD_RADIUS, HEAD_RADIUS);
+				add(oval);
+		}
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
