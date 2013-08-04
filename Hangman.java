@@ -48,7 +48,10 @@ public class Hangman extends ConsoleProgram {
     	     chance--;
     	     println("You have " +chance+" guesses left.");}
     	else{
+    		cover[pos1]=ch1;
     		println("The word now looks like this");
+    		for (int i=0;i<length;i++) 
+        	    print(cover[i]);
     	}
     	}
     	
