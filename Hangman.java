@@ -65,7 +65,7 @@ public class Hangman extends ConsoleProgram {
                 println("That guess is correct!");
 				print("The word now looks like this: ");
 				println(covered);
-				canvas.remove(wordlabel);
+				canvas.remove(getComponentAt(getWidth()/2, getHeight()*9/10));
 				canvas.displayWord(covered);
 				println("You have " + chance + " guesses left.");
 
@@ -83,5 +83,5 @@ public class Hangman extends ConsoleProgram {
 	private HangmanLexicon lex = new HangmanLexicon();
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	private HangmanCanvas canvas;
-	private GLabel wordlabel;
+
 }
