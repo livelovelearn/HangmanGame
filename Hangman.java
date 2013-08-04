@@ -20,7 +20,7 @@ public class Hangman extends ConsoleProgram {
         
         String covered ="";
     	int chance = 8;
-    	int leftch= length-1;
+    	int leftch= length;
     	char cover[]= new char[length];
     	int coverInt[]= new int[length];
     	
@@ -63,11 +63,13 @@ public class Hangman extends ConsoleProgram {
     		
     		//for (int i=0;i<length;i++) 
         	    print(covered);
+        	    println();
     		
     		}
     	 if (leftch==0)
     	 	{
-    	 		println("you win");
+    	 		
+    		 println("you win");
     	 		break;
     	 	}
     	 
