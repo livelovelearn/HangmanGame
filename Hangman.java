@@ -36,7 +36,7 @@ public class Hangman extends ConsoleProgram {
 			}
 
 			while (ch1 - 'A' < 0 || ch1 - 'A' > 25) {
-				str1 = ("illegal character, please guess again: ");
+				str1= readLine("illegal character, please guess again: ");
 				ch1 = str1.charAt(0);
 				if (ch1 - 'a' >= 0 && ch1 - 'a' <= 25) {
 					ch1 = (char) (ch1 - 'a' + 'A');
