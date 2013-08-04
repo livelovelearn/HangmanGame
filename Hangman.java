@@ -58,10 +58,8 @@ public class Hangman extends ConsoleProgram {
     		 leftch--;}
     		if (word.substring(pos1+1).indexOf(ch1)<0);
     			 break;
-    		 pos1 = word.substring(pos1+1).indexOf(ch1);
-    		
-    		
-    		}
+    		 //pos1 = word.substring(pos1+1).indexOf(ch1);
+    		   		}
     		
     		
     		print("The word now looks like this: ");
