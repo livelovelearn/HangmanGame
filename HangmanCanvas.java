@@ -121,7 +121,7 @@ public class HangmanCanvas extends GCanvas {
 				break;
 			case 0:
 				GLabel label0 = new GLabel("You lose", getWidth()/2-20, getHeight()/2);
-				label0.setFont("Arial-20");
+				label0.setFont("Raavi-20");
 				add(label0);
 			
 		}
