@@ -12,6 +12,11 @@ import acm.util.*;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
+	
+	public void init(){
+		canvas = new HangmanCanvas();
+		add(canvas);
+	}
 
 	public void run() {
 		int random = rgen.nextInt(0, 10);
@@ -74,4 +79,5 @@ public class Hangman extends ConsoleProgram {
 
 	private HangmanLexicon lex = new HangmanLexicon();
 	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private HangmanCanvas canvas;
 }
