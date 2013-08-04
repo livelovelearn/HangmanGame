@@ -45,7 +45,7 @@ public class Hangman extends ConsoleProgram {
     	     chance--;
     	     println("You have " +chance+" guesses left.");}
     	else{
-    		println("The word now looks like this")
+    		println("The word now looks like this");
     	}
     	}
     	
