@@ -16,10 +16,11 @@ public class Hangman extends ConsoleProgram {
     public void run() {
     	int random = rgen.nextInt (0, 10);
         String word = lex.getWord(4);
-    	int length = word.length();
+        int length = word.length();
     	int chance = 8;
     	int leftch= length;
     	char cover[]= new char[length];
+    	int coverInt[]= new int[length];
     	
     	println("Welcom to Hangman!");
     	print("The word now looks like this: ");
@@ -49,19 +50,36 @@ public class Hangman extends ConsoleProgram {
     	     println("You have " +chance+" guesses left.");
     	     }
     	else{
-    		leftch--;
-    		cover[pos1]=ch1;
+    		 while (true)
+    		{
+    		if (coverInt[pos1]==0)
+    		{cover[pos1]=ch1;    		
+    		 coverInt[pos1]=1;
+    		 leftch--;}
+    		 if (word.substring(pos1+1).indexOf(ch1)==-1);
+    		 break;
+    		 pos1=word.substring(pos1+1).indexOf(ch1);
+    		
+    		
+    		}
+    		
+    		
     		print("The word now looks like this: ");
+    		
     		for (int i=0;i<length;i++) 
         	    print(cover[i]);
     		println();
-    	    }
+    		}
+     }
+    	
+    	
+    	
     	if (leftch==0)
     	{
     		println("you win");
-    		break;
+    		
     	}
-     }
+    
     	
     	if (chance==0)println("You lose");
 	}
