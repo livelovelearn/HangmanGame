@@ -19,7 +19,7 @@ public class HangmanCanvas extends GCanvas {
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
-		GLabel wordlabel = new GLabel(word, 0, 0);
+		GLabel wordlabel = new GLabel(word, getWidth()/2, getHeight()/2);
 		add (wordlabel);
 	}
 
