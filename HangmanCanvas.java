@@ -17,7 +17,7 @@ public class HangmanCanvas extends GCanvas {
 		add(line2);
 		GLine line3 = new GLine(getWidth()/2-BEAM_LENGTH,getHeight()*0.1,getWidth()/2-BEAM_LENGTH,getHeight()*0.1+SCAFFOLD_HEIGHT);
 		add(line3);
-	}
+		}
 
 /**
  * Updates the word on the screen to correspond to the current
@@ -35,10 +35,10 @@ public class HangmanCanvas extends GCanvas {
  * on the scaffold and adds the letter to the list of incorrect
  * guesses that appears at the bottom of the window.
  */
-	public void noteIncorrectGuess(char letter) {
-		String wrongLetters = "";
+	public void noteIncorrectGuess(char letter, int chance) {
+		String wrongLetters ="";
 		wrongLetters += letter;
-		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2, getHeight()*0.95);
+		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2-chance*30, getHeight()*0.95);
 		add (wordlabe2);
 	}
 
