@@ -11,11 +11,11 @@ public class HangmanCanvas extends GCanvas {
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 		removeAll();
-		GLine line1 = new GLine(getWidth()/2,getHeight()*0.2, getWidth()/2, getHeight()*0.2 + ROPE_LENGTH);
+		GLine line1 = new GLine(getWidth()/2,getHeight()*0.1, getWidth()/2, getHeight()*0.1 + ROPE_LENGTH);
 		add(line1);
-		GLine line2 = new GLine(getWidth()/2-BEAM_LENGTH,getHeight()*0.2, getWidth()/2,getHeight()*0.2);
+		GLine line2 = new GLine(getWidth()/2-BEAM_LENGTH,getHeight()*0.1, getWidth()/2,getHeight()*0.1);
 		add(line2);
-		GLine line3 = new GLine(getWidth()/2-BEAM_LENGTH,getHeight()*0.2,getWidth()/2-BEAM_LENGTH,getHeight()*0.2+SCAFFOLD_HEIGHT);
+		GLine line3 = new GLine(getWidth()/2-BEAM_LENGTH,getHeight()*0.1,getWidth()/2-BEAM_LENGTH,getHeight()*0.1+SCAFFOLD_HEIGHT);
 		add(line3);
 	}
 
@@ -36,7 +36,10 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
+		String wrongLetters = "";
+		wrongLetters += letter;
+		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2, getHeight()*0.95);
+		add (wordlabe2);
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
