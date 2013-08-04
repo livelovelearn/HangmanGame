@@ -77,6 +77,7 @@ public class Hangman extends ConsoleProgram {
 
 			if (chance == 0)
 				println("You lose");
+			    println("The secret word is " + word);
 		}
 	}
 
