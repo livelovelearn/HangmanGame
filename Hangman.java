@@ -56,7 +56,7 @@ public class Hangman extends ConsoleProgram {
 						leftch--;
 					}
 				}
-                println("That guess is correct!")
+                println("That guess is correct!");
 				print("The word now looks like this: ");
 				println(covered);
 				println("You have " + chance + " guesses left.");
