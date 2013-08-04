@@ -65,6 +65,7 @@ public class Hangman extends ConsoleProgram {
                 println("That guess is correct!");
 				print("The word now looks like this: ");
 				println(covered);
+				canvas.displayWord(covered);
 				println("You have " + chance + " guesses left.");
 
 			}
