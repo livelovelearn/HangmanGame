@@ -58,18 +58,7 @@ public class Hangman extends ConsoleProgram {
     				leftch--;
     			}
     		}
-    		/* while (true)
-    		{
-    		if (coverInt[pos1]==0)
-    		{cover[pos1]=ch1;    		
-    		 coverInt[pos1]=1;
-    		 leftch--;}
-    		if (word.substring(pos1+1).indexOf(ch1)<0);
-    			 break;*/
-    		 //pos1 = word.substring(pos1+1).indexOf(ch1);
-    		   		}
-    		
-    		
+  		
     		print("The word now looks like this: ");
     		
     		//for (int i=0;i<length;i++) 
@@ -83,11 +72,13 @@ public class Hangman extends ConsoleProgram {
     	if (leftch==0)
     	{
     		println("you win");
-    		
+    		break;
     	}
     
     	
-    	if (chance==0)println("You lose");
+    	if (chance==0)
+    		println("You lose");
+     }
 	}
 
   
