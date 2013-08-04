@@ -18,7 +18,7 @@ public class Hangman extends ConsoleProgram {
         String word = lex.getWord(4);
         int length = word.length();
         
-        String covered = null;
+        String covered =null;
     	int chance = 8;
     	int leftch= length;
     	char cover[]= new char[length];
@@ -27,9 +27,7 @@ public class Hangman extends ConsoleProgram {
     	println("Welcom to Hangman!");
     	print("The word now looks like this: ");
     	for (int i=0;i<length;i++) 
-    		covered += '-';
-    	//for (int i=0;i<length;i++) 
-    	    print(covered);
+    		  print("-");
     	println();
     	
      while(chance>0){
