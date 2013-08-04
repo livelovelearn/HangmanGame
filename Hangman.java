@@ -52,6 +52,7 @@ public class Hangman extends ConsoleProgram {
 
 			int pos1 = word.indexOf(ch1);
 			if (pos1 == -1) {
+				canvas.reset();
 				canvas.noteIncorrectGuess(ch1);
 				println("There are no " + ch1 + "'s in the word.");
 				chance--;
