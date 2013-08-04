@@ -15,7 +15,7 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
     	int random = rgen.nextInt (0, 10);
-        String word = lex.getWord(9);
+        String word = lex.getWord(4);
     	int length = word.length();
     	int chance = 8;
     	int leftch= length;
