@@ -27,7 +27,7 @@ public class Hangman extends ConsoleProgram {
     	println("Welcom to Hangman!");
     	print("The word now looks like this: ");
     	for (int i=0;i<length;i++) 
-    		  print("-");
+    		  covered += '-';
     	println();
     	
      while(chance>0){
