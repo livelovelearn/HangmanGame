@@ -1,8 +1,5 @@
 /*
- * File: HangmanLexicon.java
- * -------------------------
- * This file contains a stub implementation of the HangmanLexicon
- * class that you will reimplement for Part III of the assignment.
+ * This program reads words from a designated file "HangmanLexicon.txt" and constructs a library for Hangman to randomly select a word from
  */
 
 import java.io.BufferedReader;
@@ -14,12 +11,12 @@ import acm.util.*;
 
 public class HangmanLexicon {
 	
-	ArrayList<String> pool = new ArrayList<String>();
+	ArrayList<String> pool = new ArrayList<String>(); // Hangman libary is constructed with arraylist
 
 	public HangmanLexicon() {
 
 		try {
-			BufferedReader rd = getFileToRead();
+			BufferedReader rd = getFileToRead(); // read line by  line from "HangmanLexicon.txt"
 
 			while (true) {
 				String line = rd.readLine();
