@@ -47,6 +47,7 @@ public class HangmanCanvas extends GCanvas {
 		GLabel wordlabe2 = new GLabel(wrongLetters, getWidth()/2+50-chance*10, getHeight()*0.95);
 		add (wordlabe2);
 		
+		/*display the corresponding graph according to the number of chances left for the play to guess */
 		switch (chance){
 			case 7:
 				GOval oval= new GOval(getWidth()/2-HEAD_RADIUS/2, getHeight()*0.1 + ROPE_LENGTH, HEAD_RADIUS, HEAD_RADIUS);
